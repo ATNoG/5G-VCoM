@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## What do we do?
+With upcoming 5G network architectures in mind, 5G-VCoM exploits a holistic vision of SDN and NFV integration to provide abstract mechanisms that support flow mobility management in an access technology-independent deployment. To this end, 5G-VCoM instantiates a virtual representation of the MN (vMN) and the Point of Attachment (vPoA) in the cloud. These virtual representations can be coupled with the necessary logic to support mobility management entities in the network with the necessary abstract means for heterogeneous cross-technology mobility procedures, whose outcome could be conveyed back to their physical counterparts via SDN signalling extended to the MN.
 
-You can use the [editor on GitHub](https://github.com/ATNoG/5G-VCoM/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Mobile Node and its virtualisation
+Selectively using a vMN enables the network to preserve the necessary elements with information about the MN’s medium access to the
+network, enabling the Controller to adapt the network building blocks to the different types access technology used by the MN (i.e., mobile and Wi-Fi). 
+Notwithstanding, the vMN supports a mobility management cloud service, under which the MN is anchored and mapped in the network. OpenFlow is driven to bind the MN and vMN, enabling both entities to directly interact with each other. While the MN exploits this protocol to provide context about its surrounding wireless links and assist the network connectivity selection, the vMN uses it to manage the data traffic of the MN by implementing flow-level actions.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Where do we stand?
+5G-VCoM is a proof-of-concept framework implemented and evaluated in a physical wireless testbed for abstraction of the mobility procedures in an access technology-independent deployment. The framework virtualizes both PoA and MN and creates the necessary mechanisms allowing those virtual representations to realize mobility procedures in an abstract way. 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ATNoG/5G-VCoM/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Publications
+[1] Flávio Meneses, Daniel Corujo, Carlos Guimarães, Rui L. Aguiar, "An Abstraction Framework for Flow Mobility in Multi-Technology 5G environments using Virtualization and SDN", Proc. 3rd IEEE Conference on Network Softwarization (IEEE NetSoft 2017), Bologna, Italy, Jul 2017
