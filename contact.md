@@ -1,6 +1,5 @@
----
-[Home](https://atnog.github.io/5G-VCoM/) [Members](https://atnog.github.io/5G-VCoM/contact)
----
+| [Home](https://atnog.github.io/5G-VCoM/) | [Members](https://atnog.github.io/5G-VCoM/contact) |
+|---|---|
 
 # Team members
 < Developer> Flávio Meneses < /Developer>
