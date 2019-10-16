@@ -1,105 +1,426 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>5G-VCoM</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
-    <title>5G-VCoM by ATNoG</title>
-  </head>
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <body>
-    <header>
-       <div class="inner">
-        <h1>5G-VCoM</h1>
-        <h2>5G Virtual Cloud Mobility</h2>
-        <a href="https://github.com/ATNoG/5G-VCoM" class="button" target="_blank"><small>View project on</small>GitHub</a>
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">5G<span>VCoM</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
-    </header>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#body">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Scenarios</a></li>
+          <li><a href="#portfolio">Demos</a></li>
+          <li><a href="#projects">Sub-projects</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="https://github.com/ATNoG/5G-VCoM/wiki/Publications" target="_blank">Publications</a></li>
+          <li><a href="https://github.com/ATNoG/5G-VCoM/wiki" target="_blank">Documentation</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
 
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="navbar-inner">
-        <div class="inner clearfix">
-          <ul class="nav">
-            <li class="nav-item active"><a href="">Home</a></li>
-            <li class="nav-item"><a href="technologies.html">Technologies</a></li>
-            <li class="nav-item"><a href="about.html">About</a></li>
-            <li class="nav-item"><a href="members.html">Members</a></li>
-            <li class="nav-item"><a href="subprojects.html">Subprojects</a></li>
-            <li class="nav-item"><a href="https://github.com/ATNoG/5G-VCoM/wiki" target="_blank">Documentation</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-
-		<h1>Fundamental Technologies for supporting 5G scenarios</h1>
-
-		<p class="repo-owner">The upcoming 5th Generation of Telecommunication Networks will make use of new base mechanisms
-		and technologies, in order to address the increasingly complex requirements of Information and Communication
-		Technologies deployment scenarios.</p>
-		
-		<p class="repo-owner">Core to these technologies stand <i>Software Defined Networking</i> and <i>Network Function
-			Virtualization</i> mechanisms, which aim to increase the flexibility, dynamism, and capabilities
-		of the networking fabric.</p>		
-		
-		<p class="repo-owner">We thus stand and an important juncture, where such technologies can be dually preceived
-		not only as the underlying operational mechanisms for 5G-enablement, but also as the percursors of more
-		advanced scenarios and utlization concepts.</p>		
-		
-		<h2>5G City and 5G Operator</h2>
-		
-		<img src="images/5gvcom.png"/>
-
-		<p>The project focuses on contributions for the enablement of new and enhanced mechanisms for Operators and Smart-cities
-		deployments.</p>
-		
-		<p><h4>The 5G Operator:</h4> Operators, under scope of a 5G architecture, will go beyond the provisioning of new mobile network radio solutions. Beyond direct improvements to bandwidth, latency and large numbers of connected nodes, 5G Operators will require smart capabilities that couple, in a flexible and dynamic way, the optimisation of service provisioning for mobile users in heterogeneous connectivity environments. On one hand, different forms of wireless and wired connectivity solutions are becoming available in different aspects, providing different kinds of access technologies. In order to make such different technologies available and manageable, current technologies need to replicate management and control aspects, representing a potential waste of resources and unoptimal servicing paths. On the other hand, the explosion of on-line and smartphone apps have been forever changing user consumption habits. For example, nowadays it is widely common for consumers to also become	producers, which require the underlying infrastructure to offer solutions for real time video broadcasting while on the move.</p>
-		
-		<p><h4>5G City:</h4> Adding to the previous challenge of optimal connectivity in different access technologies, there is also the challenge of device heterogeneity. With the explosion of the Internet of Things, allowing the conception and enablement of Smart-X scenarios, such as Smart-cities or Smart-Agriculture, we are witnessing the addition to the connectivity plane of huge numbers of devices with disparate features. In order to allow their utilisation to trully flourish and enable the vision of Smart-X and Digital Societies, control aspects need to be aware of the capabilities of the devices, how to optimize not only involved connectivity procedures, but also how to interact with the devices.</p>
-		
-		<h2>Key Contributions</h2>
-			
-		<p>5G-VCoM provides the most advanced enabling technologies for 5G Operators and 5G Cities by addressing:</p>
-			
-			<ul>
-				<li>Provide improved, flexible and dynamic means for access-independent optimised 
-				mobility management, allowing Always Best Connectivity for wireless and wireless terminals.</li>
-				<li>Enhance and support network control mechanisms by allowing SDN and NFV mechanisms to reach
-				not only network end-point, but actually be able to reach the mobile terminals for added
-				control and optimization capabilities.</li>
-				<li>Enhance performance-demanding 5G Operator and 5G City scenarios by virtualizing key
-				components (both from a user or a network standpoint) in a cloud-computing substrate, allowing
-				new performance, control and capabilities to be created.</li>
-				<li>Create the underlying measures to provide a "virtualised" vision of different components,
-				allowing their virtualised representation to be enhanced with added features, in a streamlined
-				and controllable way.</li>
-			</ul>
-
-		<p>Results are being made available in open-source software, scientific dissemination and standardisation contributions.</p>
-			
-		</section>
-
-        <aside id="sidebar">
-
-          <p class="repo-owner"><a target="_blank" href="https://github.com/ATNoG/5G-VCoM">5G-VCoM</a> is maintained by <a target="_blank" href="https://www.it.pt/Groups/Index/19">Telecommunications and Networking Group @ IT-Aveiro</a>.
-          <br><br>This page is a modification from the page generated by <a target="_blank" href="http://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+    <div class="intro-content">
+      <h2>5G <span>Virtual Cloud Mobility</span></h2>
+      <div>
+        <a href="https://github.com/ATNoG/5G-VCoM" target="_blank" class="btn-get-started scrollto">< Code ></a>
+        <a href="https://github.com/ATNoG/5G-VCoM/wiki" target="_blank" class="btn-projects scrollto">< Wiki ></a>
       </div>
     </div>
 
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
+    </div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="img/5gvcom.png" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>5G-VCoM</h2>
+            <h3>The project focuses on contributions for the enablement of new and enhanced mechanisms for Operators and Smart-cities deployments.</h3>
+
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i>Provide improved, flexible and dynamic means for access-independent optimised mobility management, allowing Always Best Connectivity for wireless and wireless terminals.</li>
+              <li><i class="ion-android-checkmark-circle"></i>Enhance and support network control mechanisms by allowing SDN and NFV mechanisms to reach not only network end-point, but actually be able to reach the mobile terminals for added control and optimization capabilities.</li>
+              <li><i class="ion-android-checkmark-circle"></i>Enhance performance-demanding 5G Operator and 5G City scenarios by virtualizing key components (both from a user or a network standpoint) in a cloud-computing substrate, allowing new performance, control and capabilities to be created.</li>
+              <li><i class="ion-android-checkmark-circle"></i>Create the underlying measures to provide a "virtualised" vision of different components, allowing their virtualised representation to be enhanced with added features, in a streamlined and controllable way.</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Fundamental Technologies for supporting 5G scenarios</h2>
+          <p><i>The upcoming 5th Generation of Telecommunication Networks will make use of 
+            new base mechanisms and technologies, in order to address the increasingly complex 
+            requirements of Information and Communication Technologies deployment scenarios.
+            Core to these technologies stand Software Defined Networking and 
+            Network Function Virtualization mechanisms, which aim to increase the flexibility, 
+            dynamism, and capabilities of the networking fabric.
+            We thus stand and an important juncture, where such technologies can be 
+            dually preceived not only as the underlying operational mechanisms for 5G-enablement, 
+            but also as the percursors of more advanced scenarios and utlization concepts.</i></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="fa fa-signal"></i></div>
+              <h4 class="title"><a href="">5G Operator</a></h4>
+              <p class="description">Operators, under scope of a 5G architecture, will go beyond the provisioning of 
+                  new mobile network radio solutions. Beyond direct improvements to bandwidth, 
+                  latency and large numbers of connected nodes, 5G Operators will require smart capabilities 
+                  that couple, in a flexible and dynamic way, the optimisation of service provisioning for 
+                  mobile users in heterogeneous connectivity environments. 
+                  On one hand, different forms of wireless and wired connectivity solutions are becoming available 
+                  in different aspects, providing different kinds of access technologies. 
+                  In order to make such different technologies available and manageable, 
+                  current technologies need to replicate management and control aspects, representing a potential 
+                  waste of resources and unoptimal servicing paths. On the other hand, the explosion of on-line and 
+                  smartphone apps have been forever changing user consumption habits. For example, nowadays it is 
+                  widely common for consumers to also become producers, which require the underlying infrastructure to 
+                  offer solutions for real time video broadcasting while on the move.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="fa fa-building-o"></i></div>
+              <h4 class="title"><a href="">5G City</a></h4>
+              <p class="description">Adding to the previous challenge of optimal connectivity in different access technologies, 
+                there is also the challenge of device heterogeneity. 
+                With the explosion of the Internet of Things, allowing the conception and 
+                enablement of Smart-X scenarios, such as Smart-cities or Smart-Agriculture, 
+                we are witnessing the addition to the connectivity plane of huge numbers of devices with disparate features. 
+                In order to allow their utilisation to trully flourish and enable the vision of Smart-X and Digital Societies, 
+                control aspects need to be aware of the capabilities of the devices, how to optimize not only 
+                involved connectivity procedures, but also how to interact with the devices.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--MN Virutalization-->
+    <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <h2>Where do we stand?</h2>
+            <p><i>5G-VCoM is a proof-of-concept framework implemented and 
+              evaluated in a physical wireless testbed for abstraction of the 
+              mobility procedures in an access technology-independent deployment.
+              The framework virtualizes both Point of Attachment (PoA) and Mobile Node (MN) and creates the necessary 
+              mechanisms allowing those virtual representations to realize 
+              mobility procedures in an abstract way.</i></p>
+          </div>
   
-  </body>
+          <div class="row">
+  
+            <div class="col-lg-12">
+              <div class="box wow fadeInLeft">
+                <div class="icon"><i class="fa fa-tablet"></i></div>
+                <h4 class="title"><a href="">MN and its virtualization</a></h4>
+                <p class="description">Selectively using a virtual Mobile Node (vMN) enables the network to preserve 
+                  the necessary elements with information about the MN’s medium access to the network, 
+                  enabling the Controller to adapt the network building blocks to the different 
+                  types access technology used by the MN (i.e., mobile and Wi-Fi). 
+                  Notwithstanding, the vMN supports a mobility management cloud service, 
+                  under which the MN is anchored and mapped in the network. 
+                  OpenFlow is driven to bind the MN and vMN, enabling both entities to 
+                  directly interact with each other. While the MN exploits this protocol 
+                  to provide context about its surrounding wireless links and assist the network 
+                  connectivity selection, the vMN uses it to manage the data traffic 
+                  of the MN by implementing flow-level actions.</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- #mn-virtualisation -->
+
+    <!--==========================
+      DEMOS
+    ============================-->
+    <section id="portfolio" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Demos</h2>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 col-md-4">
+            <h4 style="text-align: center;">Mobile Offloading</h4>
+            <div class="portfolio-item wow fadeInUp" style="border-right: 1px dashed #50d8af;">
+              <!--<a href="./videos/demo1.mp4" class="portfolio-popup">-->
+              <a href="#headerPopup1" id="headerVideoLink1" target="_blank" class="popup-modal">
+                <img src="img/demos/mobile.jpg" alt="">
+                <!--
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info"><h2 class="wow fadeInUp">Mobile Offloading</h2></div>
+                </div>
+                -->
+              </a>
+            </div>
+            <p style="text-align: center; font-size: 12px;">[Figure from https://doi.org/10.1007/s11277-018-5621-9]</p>
+          </div>
+          <div id="headerPopup1" class="mfp-hide embed-responsive embed-responsive-21by9">
+              <iframe class="embed-responsive-item" width="854" height="480" src="./videos/demo1.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6 col-md-8">
+            <h4 style="text-align: center;">Modular vCPE</h4>
+            <div class="portfolio-item wow fadeInUp">
+              <!--<a href="./videos/demo1.mp4" class="portfolio-popup">-->
+                <a href="#headerPopup2" id="headerVideoLink2" target="_blank" class="popup-modal">
+                <img src="img/demos/vcpe.jpg" alt="">
+                <!--
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info"><h2 class="wow fadeInUp">Modular vCPE</h2></div>
+                </div>
+              -->
+              </a>
+            </div>
+            <p style="text-align: center; font-size: 12px;">[Figure from TBA]</p>
+          </div>
+          <div id="headerPopup2" class="mfp-hide embed-responsive embed-responsive-21by9">
+              <iframe class="embed-responsive-item" width="854" height="480" src="./videos/vcpe.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #demos -->
+
+
+    <!--==========================
+      Sub-Projects
+    ============================-->
+    <div id="projects"></div>
+    <section id="portfolio" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Sub-projects</h2>
+          </div>
+        </div>
+  
+        <div class="container-fluid">
+          <div class="row no-gutters">
+  
+            <div class="col-lg-4 col-md-4">
+              <h4 style="text-align: center;">Deviceless</h4>
+              <div class="portfolio-item wow fadeInUp">
+                <a href="#TODO">
+                  <img src="img/subprojects/deviceless.jpg" alt="">
+                  <!--
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info"><h2 class="wow fadeInUp">Deviceless</h2></div>
+                  </div>
+                -->
+                </a>
+              </div>
+              <p style="text-align: center; font-size: 12px;">[Figure from https://doi.org/10.1007/s11277-018-5621-9]</p>
+            </div>
+  
+            <div class="col-lg-4 col-md-4">
+                <h4 style="text-align: center;">SliMANO</h4>
+              <div class="portfolio-item wow fadeInUp item-line">
+                <a href="https://atnog.github.io/SliMANO/" target="_blank">
+                  <img src="img/subprojects/slimano.jpg" alt="">
+                  <!--
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info"><h2 class="wow fadeInUp">SliMANO</h2></div>
+                  </div>
+                -->
+                </a>
+              </div>
+              <p style="text-align: center; font-size: 12px;">[Figure from TBA]</p>
+            </div>
+  
+            <div class="col-lg-4 col-md-4">
+                <h4 style="text-align: center;">Modular vCPE</h4>
+              <div class="portfolio-item wow fadeInUp">
+                <a href="#TODO">
+                  <img src="img/subprojects/vcpe.jpg" alt="">
+                  <!--
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info"><h2 class="wow fadeInUp">Modular vCPE</h2></div>
+                  </div>
+                  -->
+                </a>
+              </div>
+              <p style="text-align: center; font-size: 12px;">[Figure from TBA]</p>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- #Sub-projects -->
+    
+
+    <!--==========================
+      Our Team Section
+    ============================-->
+    <section id="team" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Team</h2>
+          <h3>5G-VCOM is a research project involving researchers and academia of the Instituto de Telecomunicações and the Departamento de Eletrónica, Telecomunicações e Informática, of the University of Aveiro, Portugal.</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="userpic" style="background-image: url('https://atnog.av.it.pt/mygravatar/index.html%3Fgravatar_id=63f0e6ec260fccddf6e45319f460e243&size=85');">
+              </div>
+              <h4><a href="https://www.it.pt/Members/Index/18857" target="_blank">Flavio Meneses</a></h4>
+              <span>Developer</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="userpic" style="background-image: url('https://atnog.av.it.pt/mygravatar/index.html%3Fgravatar_id=ef8cc22437ff68319cf3ea86e3d9ae60&size=85');">
+              </div>
+              <h4><a href="https://www.it.pt/Members/Index/1953" target="_blank">Daniel Corujo</a></h4>
+              <span>Project Manager</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="userpic" style="background-image: url('https://atnog.av.it.pt/mygravatar/index.html%3Fgravatar_id=dae914a8971b9c8d19c708bbf54d92a7&size=85');">
+             </div>
+             <h4><a href="https://www.it.pt/Members/Index/357" target="_blank">Rui L. Aguiar</a></h4>
+             <span>Team Leader</span>
+           </div>
+          </div>
+        </div>
+      <h5>Full list of <a href="https://github.com/ATNoG/5G-VCoM/wiki" target="_blank">contributors</a>.</h5>
+      </div>
+    </section><!-- #team -->
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script>
+          $( document ).ready(function() {
+         $('#headerVideoLink1').magnificPopup({
+          type:'inline',
+          midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        });
+        $('#headerVideoLink2').magnificPopup({
+          type:'inline',
+          midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        });
+          
+        });
+  </script>
+
+</body>
 </html>
