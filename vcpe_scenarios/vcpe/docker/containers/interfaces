@@ -1,0 +1,12 @@
+
+auto lo
+iface lo inet loopback
+
+
+auto eth0
+iface eth0 inet static
+        address 0
+
+auto eth1
+iface eth1 inet static
+        address 0

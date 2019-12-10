@@ -1,0 +1,5 @@
+netifaces
+PyYAML
+docker-py
+requests
+docker-events

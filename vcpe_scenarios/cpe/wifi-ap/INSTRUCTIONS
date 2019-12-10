@@ -1,0 +1,6 @@
+
+Comandos a usar para correr container:
+
+>docker build -t vieiratiago/docker-ap .
+
+>docker run --privileged -v /dev/urandom:/dev/random -ti --rm --name wifi-ap --net host vieiratiago/docker-ap

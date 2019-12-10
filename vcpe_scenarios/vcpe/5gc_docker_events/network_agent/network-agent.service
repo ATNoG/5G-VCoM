@@ -1,0 +1,10 @@
+[Unit]
+Description=Docker event notifier
+
+[Service]
+ExecStart=/opt/swarmc/5gc_docker_swarm/network_agent/run.sh
+Type=simple
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

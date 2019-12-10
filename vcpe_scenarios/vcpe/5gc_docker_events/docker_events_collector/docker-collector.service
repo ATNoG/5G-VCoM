@@ -1,0 +1,10 @@
+[Unit]
+Description=Docker event collector
+
+[Service]
+ExecStart=/opt/swarmc/5gc_docker_swarm/docker_events_collector/run.sh
+Type=simple
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

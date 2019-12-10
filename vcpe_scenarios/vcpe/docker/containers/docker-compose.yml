@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+   firewall:
+     container_name: firewall
+     image: registry.local:5005/firewall
+   # para os containers ficarem up:
+   # tty: true
+     cap_add:
+     - NET_ADMIN
+     build:
+      context: .
+      dockerfile: firewall.dockerfile
+     network_mode: "none"
+     privileged: true
+     deploy:
+       mode: replicated
+       replicas: 1
+       placement:
+         constraints:
+           - node.hostname==<node_name>
+
+   dhcp:
+    container_name: dhcp_server
+    image: registry.local:5005/dhcp-server
+    #tty: true
+    cap_add:
+     - ALL
+    build:
+      context: ./dhcp-server/
+      dockerfile: dhcp.dockerfile
+    network_mode: "none"
+    deploy:
+       mode: replicated
+       replicas: 1
+       placement:
+         constraints:
+           - node.hostname==<node_name>
+

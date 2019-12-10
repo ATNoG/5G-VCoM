@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#clear all the rules and chains:
+iptables -F
+iptables -X
+iptables -t nat -F
+
+#allow pings to pass through:
+#iptables -A FORWARD -s 10.10.11.9 -i eth0 -d 10.0.0.0/24 -o eth1 -j ACCEPT
+#iptables -A FORWARD -s 10.0.0.0/24 -i eth1 -d 10.10.11.0/24 -o eth0 -j ACCEPT
+iptables -A FORWARD -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A FORWARD -p icmp --icmp-type echo-reply -j ACCEPT
+
+#allow pings from outside:
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+#allow pings from inside:
+iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+iptables -A FORWARD -i eth0 -o eth1 -j ACCEPT
+iptables -A FORWARD -i eth1 -o eth0 -j ACCEPT
+
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+sh
