@@ -593,7 +593,7 @@ def docker_stack(num, action):
 		"member_vnf_index": "2",
 		"primitive": "stack-deploy",
 		"primitive_params": {
-			"docker_compose_url": "http://192.168.85.28/docker/containers/docker-compose.yml",
+			"docker_compose_url": docker_compose_url,
 			"stack_name": stack_name
 		}
 	}
@@ -612,7 +612,7 @@ def docker_stack(num, action):
 	}
 
 
-	response = requests.get('https://192.168.85.148:9999/osm/nslcm/v1/ns_instances', headers=headers, verify=False)
+	response = requests.get('https://'+osm_url+'/osm/nslcm/v1/ns_instances', headers=headers, verify=False)
 	osm_data = []
 	osm_data = json.loads(response.text)
 	
@@ -623,7 +623,7 @@ def docker_stack(num, action):
 					aux=osm_data[i].get("id")
 					break
 
-	url_docker_stack = 'https://192.168.85.148:9999/osm/nslcm/v1/ns_instances/'+aux+'/action'			
+	url_docker_stack = 'https://'+osm_url+'/osm/nslcm/v1/ns_instances/'+aux+'/action'			
 	
 	if action == "deploy":
 		r = requests.post(url_docker_stack, data=json.dumps(payload1), headers=headers, verify=False)
@@ -903,8 +903,8 @@ def get_token():
 		'Accept': 'application/json',
 		'Content-Type': 'application/json',
 	}
-	data = '{\n    "username": "vieiratiago",\n    "password": "xanfrado99",\n    "project_id": "5gcontact"\n}'
-	response = requests.post('https://192.168.85.148:9999/osm/admin/v1/tokens', headers=headers, data=data, verify=False)
+	data = '{\n    "username": "user",\n    "password": "user",\n    "project_id": "5gcontact"\n}'
+	response = requests.post('https://'+osm_url+'/osm/admin/v1/tokens', headers=headers, data=data, verify=False)
 
 	token = json.loads(response.text)
 	return token
@@ -923,7 +923,7 @@ def get_ip():
 		'Authorization': 'Bearer '+_id,
 	}
 
-	response2 = requests.get('https://192.168.85.148:9999/osm/nslcm/v1/ns_instances/', headers=headers2, verify=False)
+	response2 = requests.get('https://'+osm_url+'/osm/nslcm/v1/ns_instances/', headers=headers2, verify=False)
 	osm_data = []
 	osm_data = json.loads(response2.text)
 
@@ -934,7 +934,7 @@ def get_ip():
 					id=osm_data[i].get("id")
 					break
 
-	response2 = requests.get('https://192.168.85.148:9999/osm/nslcm/v1/vnfrs/', headers=headers2, verify=False)
+	response2 = requests.get('https://'+osm_url+'/osm/nslcm/v1/vnfrs/', headers=headers2, verify=False)
 	osm_data = []
 	osm_data = json.loads(response2.text)
 
